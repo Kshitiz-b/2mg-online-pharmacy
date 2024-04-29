@@ -1,0 +1,120 @@
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 0; /* Reduced padding to fit content */
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto next line */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-start; /* Aligns logo to the left */
+}
+
+.header-text {
+    position: absolute; /* Absolute positioning */
+    left: 50%; /* Positions the center of the text at the half of its parent */
+    transform: translateX(-50%); /* Shifts the text left by half its own width */
+    margin: 0;
+    font-size: 45px;
+}
+
+#headerLogo {
+    height: 100px; /* Your specified logo height */
+    padding-left: 20px;
+}
+
+#mainNav {
+    flex: 1;
+    display: block;
+    text-align: right; /* Aligns the nav to the right */
+    font-size: 17px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline; /* Keeps the list horizontal */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: block;
+    padding-right: 20px;
+}
+
+.section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+
+    .section {
+        margin: 5px;
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="month"],
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

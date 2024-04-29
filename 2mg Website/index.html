@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2mg</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="2mg.png">
+</head>
+<body>
+    <header class="header-top">
+        <img src="2mg.png" alt="2mg Pharmacy Logo" id="headerLogo">
+        <h1 class="header-text">Welcome to 2mg Pharmacy!</h1>
+        <br>
+        <nav id="mainNav" style="display:none;">
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('ordering')">Order Medicines</a></li>
+                <li><a href="#" onclick="showSection('orders')">My Orders</a></li>
+                <li><a href="#" onclick="showSection('profile')">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="login" class="section">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <div id="loginError" class="error" style="display:none;"></div>
+    </section>
+
+    <section id="home" class="section" style="display:none;">
+        <h2>Home</h2>
+        <p>Welcome to our Online Medicine Delivery System. Navigate using the menu above.</p>
+    </section>
+
+    <section id="ordering" class="section" style="display:none;">
+        <h2>Order Your Medicines</h2>
+        <form id="orderForm">
+            <label for="medicine">Medicine:</label>
+            <input type="text" id="medicine" name="medicine">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity">
+            <button type="button" onclick="submitOrder()">Place Order</button>
+        </form>
+        <div id="orderError" class="error" style="display:none;"></div>
+        <div id="orderConfirmation" style="display:none;"></div>
+    </section>
+
+    <section id="orders" class="section" style="display:none;">
+        <h2>My Orders</h2>
+        <div id="orderList">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+    </section>
+
+    <section id="profile" class="section" style="display:none;">
+        <h2>Your Profile</h2>
+        <p id="profileName">Username: <!-- Username will be displayed here --></p>
+    </section>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
